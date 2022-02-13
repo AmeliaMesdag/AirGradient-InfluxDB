@@ -203,6 +203,7 @@ void loop() {
     {
       Serial.print("InfluxDB write failed: ");
       Serial.println(client.getLastErrorMessage());
+      WiFi.reconnect();
     }
     
     delay(1000);
